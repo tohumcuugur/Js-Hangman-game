@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-6">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Hangman Game</h1>
+    <p>Enter letters to find hidden word.</p>
+        <svg height="450" width="450" class="sehpa">
+            <line x1="100" y1="0" x2="200" y2="0" style="stroke:rgb(233, 224, 224);stroke-width:14;" />
+            <line x1="100" y1="0" x2="100" y2="400" style="stroke:rgb(233, 224, 224);stroke-width:10;" />
+            <line x1="200" y1="0" x2="200" y2="100" style="stroke:rgb(233, 224, 224);stroke-width:10;" />
+            <line x1="0" y1="400" x2="200" y2="400" style="stroke:rgb(233, 224, 224);stroke-width:10;" />
+            <!-- Kafa -->
+            <circle cx="200" cy="130" r="30" stroke="black" stroke-width="10" fill="white" class="item" />
+            <!-- gövde -->
+            <line x1="200" y1="160" x2="200" y2="250" style="stroke:black;stroke-width:10;" class="item" />
+            <!-- kollar -->
+            <line x1="200" y1="180" x2="160" y2="220" style="stroke:black;stroke-width:10;" class="item" />
+            <line x1="200" y1="180" x2="240" y2="220" style="stroke:black;stroke-width:10;" class="item"/>
+            <!-- bacaklar -->
+            <line x1="200" y1="249" x2="160" y2="290" style="stroke:black;stroke-width:10;" class="item"/>
+            <line x1="200" y1="249" x2="240" y2="290" style="stroke:black;stroke-width:10;" class="item"/>
+        </svg>
+        <div id="wrong-letters">
+        </div>
+        <div id="word">
+        </div>
+    </div>
+    <div id="popup-container">
+        <div class="popup_win">
+            <h2 id="success-message"></h2>
+            <button class="play-again-win">Play Again</button>
+        </div>
+        <div class="popup_lose">    
+            <h2 id="lose-message"></h2>
+            <button class="play-again-lose">Play Again</button>
+        </div>
+    </div>
+    <div id="message" class="">
+        <p>You have already entered this letter.</p>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>

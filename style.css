@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    /*When we enter same character like a,a ,b,b message was showing but when we see massage scrool bar was coming. This is preventing to see scroll bar. */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url(./img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container h1,
+p,
+.sehpa {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.sehpa {
+    margin-top: 50px;
+}
+
+#wrong-letters {
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    /* margin-left: 65rem;
+    margin-top: 10rem; */
+}
+
+#word {
+    font-size: 45px;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@media (max-width: 576px) {
+    #word {
+        top: 95%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    #wrong-letters {
+        left: 70%;
+    }
+}
+
+@media (min-width: 577px) {
+    #word {
+        top: 85%;
+    }
+
+}
+
+@media (min-width: 976px) {
+    #word {
+        top: 75%;
+    }
+
+}
+
+.letter {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    border-bottom: 5px solid gold;
+    margin-left: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+#popup-container {
+    position: fixed;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup_win {
+    background-color: greenyellow;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+}
+
+.popup_lose {
+    background-color: rgb(235, 67, 34);
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+}
+
+button {
+    display: inline;
+    padding: 5px;
+    margin: 15px 40px 0 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid 5px;
+    border-radius: 5px;
+}
+
+.item {
+    display: none;
+}
+
+#message {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 25px;
+    padding: 10px 100px;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+    display: none;
+    width: 100%;
+}
+
+#message.show {
+    transform: translateY(-200%);
+    display: inline-block;
+}
